@@ -108,7 +108,7 @@ export const backendSkills: SkillItem[] = [
     name: "Python / Django",
     level: 5,
     years: "2014〜2022",
-    note: "Django 1.x〜3.x / DRF。位置分析・Store Locator・商圏分析などの API / 管理画面",
+    note: "Django 1.x〜3.x / DRF。位置分析・店舗検索・商圏分析などの API / 管理画面",
   },
   {
     name: "Go（gorilla/mux 等）",
@@ -218,21 +218,21 @@ export const infraSkills: SkillItem[] = [
 
 export const projects: ProjectItem[] = [
   {
-    name: "位置情報分析プラットフォーム（KLA）",
+    name: "人流・位置データ分析 Web",
     role: "設計・実装・移行",
     stack: "Django / Vue 2 / MySQL GIS / AWS / Athena",
     summary:
       "人流・交通データを扱う位置分析 Web。AngularJS から Vue への刷新、Python 3 / コンテナ化を含む。",
   },
   {
-    name: "商圏・比較分析 Web（MIP）",
+    name: "商圏・比較分析 Web",
     role: "設計・実装・移行",
     stack: "Django / Vue 2・AngularJS / Redis / AWS",
     summary:
       "商圏ヒートマップ・比較分析・ユーザーポイント管理。関連分析基盤との SSO / JWT 連携。",
   },
   {
-    name: "店舗検索 SaaS（Store Locator）",
+    name: "店舗検索・地図 SaaS",
     role: "設計・実装・運用",
     stack: "Django / AngularJS / GAE / MySQL",
     summary:
@@ -299,13 +299,13 @@ export const career: CareerItem[] = [
   {
     period: "2014年頃 〜 2022年頃（以降も断続）",
     title: "開発パートナー / フルスタックエンジニア",
-    org: "株式会社 GOGA Inc. 向け（ニーモニックとして）",
+    org: "地図・位置情報系 SaaS 企業向け（ニーモニックとして）",
     summary:
-      "位置情報・地図ソリューションを中心に、Store Locator・商圏分析・人流分析プロダクトの設計・実装・モダン化を協力。Django / Vue / AWS を軸に長期参画。",
+      "位置情報・地図ソリューションを中心に、店舗検索・商圏分析・人流分析プロダクトの設計・実装・モダン化を協力。Django / Vue / AWS を軸に長期参画。",
     highlights: [
-      "KDDI Location Analyzer（KLA）系のフロント刷新（AngularJS → Vue）とバックエンド現代化",
-      "MarketAnalyzer Satellite（MIP）の機能開発・Vue 移行・分析基盤連携",
-      "GOGA Store Locator（公開検索・管理コンソール・顧客テーマ）の実装・運用",
+      "人流・位置分析 Web のフロント刷新（AngularJS → Vue）とバックエンド現代化",
+      "商圏・比較分析 Web の機能開発・Vue 移行・分析基盤連携",
+      "店舗検索 SaaS（公開検索・管理コンソール・顧客テーマ）の実装・運用",
       "地図デモ・社内ツール、コーポレートサイト（Astro / HubSpot）など周辺開発",
     ],
   },
@@ -377,7 +377,7 @@ export const learningInterests = [
 ];
 
 export const sourcesNote =
-  "本スキルシートは、公開プロフィール・技術ブログ、ニーモニック非公開リポジトリ、および GOGA Inc. 関連の開発リポジトリ（位置情報・Store Locator・商圏分析など）をもとに構成しています。クライアント名・機密情報は伏せ、技術スタックと役割の粒度で記載しています。";
+  "本スキルシートは、公開プロフィール・技術ブログ、ニーモニック非公開リポジトリ、および協力先の地図・位置情報系プロダクト実装をもとに構成しています。クライアント名・製品名・機密情報は伏せ、技術スタックと役割の粒度で記載しています。";
 
 export const levelLabels: Record<SkillLevel, string> = {
   1: "基礎",
