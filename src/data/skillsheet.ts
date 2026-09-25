@@ -39,7 +39,7 @@ export const summary = {
   headline: "企画から実装・運用までを一人で回す、実務型フルスタック。",
   body: [
     "1995年頃からウェブデザイン・システム開発・サーバ管理を主戦場とし、制作会社勤務を経て 2010 年にフリーランスへ復帰。2014 年に株式会社ニーモニックを設立し、ウェブサイトの企画制作・デザイン・業務システムの開発を一貫して担っています。",
-    "フロントは Angular（現行 15〜22）/ AngularJS・TypeScript、バックは Python（FastAPI / Flask / webapp2）と Go、インフラは Google App Engine・Cloud Run・Datastore / Cloud SQL を中心に、B2B 受発注・認証連携・帳票／メール／非同期処理まで含む業務 Web を設計・実装・運用しています。",
+    "フロントは Angular（現行 15〜22）/ Vue / AngularJS・TypeScript、バックは Python（FastAPI / Django / Flask / webapp2）と Go、インフラは GCP（GAE / Cloud Run）と AWS を中心に、位置情報・店舗検索・B2B 業務 Web まで設計・実装・運用しています。",
   ],
 };
 
@@ -54,7 +54,13 @@ export const frontendSkills: SkillItem[] = [
     name: "AngularJS",
     level: 5,
     years: "長期",
-    note: "B2B ポータル等での $resource・コンポーネント設計・長期運用（移行案件あり）",
+    note: "B2B ポータル・店舗検索・商圏分析での SPA 設計・長期運用（Vue / Angular への移行含む）",
+  },
+  {
+    name: "Vue.js",
+    level: 4,
+    years: "2019〜",
+    note: "Vue 2（Webpack）での大規模フロント刷新。Vue 3 / Astro 連携の経験あり",
   },
   {
     name: "HTML / CSS / SCSS",
@@ -75,8 +81,9 @@ export const frontendSkills: SkillItem[] = [
   },
   {
     name: "Google Maps / チャート UI",
-    level: 4,
-    note: "地図 UI・Highcharts 等、ドメインデータ可視化の実務",
+    level: 5,
+    years: "長期",
+    note: "店舗検索・商圏・人流可視化。Maps Platform、Highcharts、D3 の実務",
   },
   {
     name: "Gulp / フロントビルド",
@@ -98,6 +105,12 @@ export const backendSkills: SkillItem[] = [
     note: "Python 3.12 + FastAPI + uvicorn。API / 管理機能・Pydantic によるスキーマ設計",
   },
   {
+    name: "Python / Django",
+    level: 5,
+    years: "2014〜2022",
+    note: "Django 1.x〜3.x / DRF。位置分析・Store Locator・商圏分析などの API / 管理画面",
+  },
+  {
     name: "Go（gorilla/mux 等）",
     level: 4,
     years: "現行",
@@ -107,6 +120,11 @@ export const backendSkills: SkillItem[] = [
     name: "Python / Flask",
     level: 4,
     note: "業務システム（請求・外部 CRM 連携など）での API / バッチ",
+  },
+  {
+    name: "MySQL / Redis",
+    level: 4,
+    note: "Django 系プロダクトの永続化・キャッシュ。GIS 利用経験あり",
   },
   {
     name: "Python / webapp2 / Jinja2",
@@ -161,6 +179,12 @@ export const infraSkills: SkillItem[] = [
     note: "コンテナレスデプロイ、Cloud SQL / Tasks / GCS との連携",
   },
   {
+    name: "AWS（S3 / RDS / ElastiCache 等）",
+    level: 4,
+    years: "2015〜2022",
+    note: "位置分析系プロダクトの運用。Athena / Redshift / ECR / Docker も利用",
+  },
+  {
     name: "Cloud Tasks / Cloud Storage",
     level: 4,
     note: "非同期処理・オブジェクトストレージ・帳票／メール送信パイプライン",
@@ -193,6 +217,27 @@ export const infraSkills: SkillItem[] = [
 ];
 
 export const projects: ProjectItem[] = [
+  {
+    name: "位置情報分析プラットフォーム（KLA）",
+    role: "設計・実装・移行",
+    stack: "Django / Vue 2 / MySQL GIS / AWS / Athena",
+    summary:
+      "人流・交通データを扱う位置分析 Web。AngularJS から Vue への刷新、Python 3 / コンテナ化を含む。",
+  },
+  {
+    name: "商圏・比較分析 Web（MIP）",
+    role: "設計・実装・移行",
+    stack: "Django / Vue 2・AngularJS / Redis / AWS",
+    summary:
+      "商圏ヒートマップ・比較分析・ユーザーポイント管理。関連分析基盤との SSO / JWT 連携。",
+  },
+  {
+    name: "店舗検索 SaaS（Store Locator）",
+    role: "設計・実装・運用",
+    stack: "Django / AngularJS / GAE / MySQL",
+    summary:
+      "公開店舗検索と管理コンソール。顧客向けテーマ実装を含む地図ソリューション。",
+  },
   {
     name: "再生可能エネルギー向け Web",
     role: "設計・実装・運用",
@@ -252,6 +297,19 @@ export const career: CareerItem[] = [
     ],
   },
   {
+    period: "2014年頃 〜 2022年頃（以降も断続）",
+    title: "開発パートナー / フルスタックエンジニア",
+    org: "株式会社 GOGA Inc. 向け（ニーモニックとして）",
+    summary:
+      "位置情報・地図ソリューションを中心に、Store Locator・商圏分析・人流分析プロダクトの設計・実装・モダン化を協力。Django / Vue / AWS を軸に長期参画。",
+    highlights: [
+      "KDDI Location Analyzer（KLA）系のフロント刷新（AngularJS → Vue）とバックエンド現代化",
+      "MarketAnalyzer Satellite（MIP）の機能開発・Vue 移行・分析基盤連携",
+      "GOGA Store Locator（公開検索・管理コンソール・顧客テーマ）の実装・運用",
+      "地図デモ・社内ツール、コーポレートサイト（Astro / HubSpot）など周辺開発",
+    ],
+  },
+  {
     period: "2010年 〜 2014年",
     title: "フリーランス エンジニア / デザイナー",
     org: "個人事業",
@@ -303,12 +361,12 @@ export const strengths = [
     body: "要件整理・デザイン・フロント・バック・デプロイ・運用まで、小さなチーム（一人）でも完結できる実務力。帳票・メール・外部 API まで含めて設計できる。",
   },
   {
-    title: "GCP 上での実戦経験",
-    body: "App Engine（Python / Go）を軸に、Cloud Run・Datastore / Cloud SQL・Tasks・Storage・Redis を組み合わせたサービス運用の知見。",
+    title: "GCP / AWS 上での実戦経験",
+    body: "App Engine・Cloud Run に加え、AWS（S3 / RDS / Redis / Athena 等）での位置情報・業務 SaaS 運用の知見。",
   },
   {
     title: "レガシーから現行への橋渡し",
-    body: "AngularJS / Python 2 / webapp2 から Angular 22 / Python 3 / FastAPI・Go への移行を、稼働中サービスとして自ら進められる。",
+    body: "AngularJS / Django 1.x / Python 2 から Vue・Angular 22 / Django 3・FastAPI・Go への移行を、稼働中サービスとして進められる。",
   },
 ];
 
@@ -319,7 +377,7 @@ export const learningInterests = [
 ];
 
 export const sourcesNote =
-  "本スキルシートは、公開プロフィール・技術ブログに加え、社内の非公開 GitHub リポジトリ（受託・自社案件の実装）をもとに構成しています。クライアント名・機密情報は伏せ、技術スタックと役割の粒度で記載しています。";
+  "本スキルシートは、公開プロフィール・技術ブログ、ニーモニック非公開リポジトリ、および GOGA Inc. 関連の開発リポジトリ（位置情報・Store Locator・商圏分析など）をもとに構成しています。クライアント名・機密情報は伏せ、技術スタックと役割の粒度で記載しています。";
 
 export const levelLabels: Record<SkillLevel, string> = {
   1: "基礎",
