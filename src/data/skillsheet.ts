@@ -15,12 +15,19 @@ export type CareerItem = {
   highlights: string[];
 };
 
+export type ProjectItem = {
+  name: string;
+  role: string;
+  stack: string;
+  summary: string;
+};
+
 export const profile = {
   nameJa: "小林 宗明",
   nameEn: "Somin Kobayashi",
   title: "フルスタック Web エンジニア / 代表取締役",
   company: "株式会社ニーモニック",
-  location: "東京都品川区",
+  location: "東京都大田区",
   email: "somin@mnemonic.co.jp",
   website: "https://www.mnemonic.co.jp",
   github: "https://github.com/mnemonic-co-jp",
@@ -31,8 +38,8 @@ export const profile = {
 export const summary = {
   headline: "企画から実装・運用までを一人で回す、実務型フルスタック。",
   body: [
-    "1995年頃からウェブデザイン・システム開発・サーバ管理を主戦場とし、制作会社勤務を経て 2010 年にフリーランスへ復帰。2014 年に株式会社ニーモニックを設立し、ウェブサイトの企画制作・デザイン・システム開発を一貫して担っています。",
-    "フロントエンドは Angular（現行）/ AngularJS・TypeScript・Bootstrap 系、バックエンドは Python（FastAPI / webapp2）・PHP、インフラは Google App Engine / Google Cloud を中心に、自社 CMS や業務システムの設計・実装・運用までを手がけてきました。",
+    "1995年頃からウェブデザイン・システム開発・サーバ管理を主戦場とし、制作会社勤務を経て 2010 年にフリーランスへ復帰。2014 年に株式会社ニーモニックを設立し、ウェブサイトの企画制作・デザイン・業務システムの開発を一貫して担っています。",
+    "フロントは Angular（現行 15〜22）/ AngularJS・TypeScript、バックは Python（FastAPI / Flask / webapp2）と Go、インフラは Google App Engine・Cloud Run・Datastore / Cloud SQL を中心に、B2B 受発注・認証連携・帳票／メール／非同期処理まで含む業務 Web を設計・実装・運用しています。",
   ],
 };
 
@@ -41,13 +48,13 @@ export const frontendSkills: SkillItem[] = [
     name: "Angular / TypeScript",
     level: 5,
     years: "現行",
-    note: "自社サイトを Angular 22 + TypeScript（strict）で再構築",
+    note: "Angular 15〜22（自社サイト・Cloud Run 案件）で SPA / 管理画面を構築。strict TypeScript",
   },
   {
     name: "AngularJS",
     level: 5,
     years: "長期",
-    note: "$resource、コンポーネント設計、SPA 運用の実務経験",
+    note: "B2B ポータル等での $resource・コンポーネント設計・長期運用（移行案件あり）",
   },
   {
     name: "HTML / CSS / SCSS",
@@ -58,7 +65,7 @@ export const frontendSkills: SkillItem[] = [
   {
     name: "Bootstrap / ng-bootstrap",
     level: 4,
-    note: "UI 実装と管理画面の構築",
+    note: "UI 実装と管理画面の構築（Bootstrap 4〜5）",
   },
   {
     name: "JavaScript（ES）",
@@ -67,9 +74,9 @@ export const frontendSkills: SkillItem[] = [
     note: "クライアントサイド実装全般",
   },
   {
-    name: "Backbone.js / jQuery",
-    level: 3,
-    note: "レガシー案件での MVC / DOM 操作経験",
+    name: "Google Maps / チャート UI",
+    level: 4,
+    note: "地図 UI・Highcharts 等、ドメインデータ可視化の実務",
   },
   {
     name: "Gulp / フロントビルド",
@@ -77,9 +84,9 @@ export const frontendSkills: SkillItem[] = [
     note: "依存のバンドル・minify・デプロイ最適化",
   },
   {
-    name: "Google Maps API",
+    name: "Backbone.js / jQuery",
     level: 3,
-    note: "地図 UI・イベントリスナの実装",
+    note: "レガシー案件での MVC / DOM 操作経験",
   },
 ];
 
@@ -88,43 +95,55 @@ export const backendSkills: SkillItem[] = [
     name: "Python / FastAPI",
     level: 5,
     years: "現行",
-    note: "Python 3.12 + FastAPI + uvicorn で API / 管理機能を実装",
+    note: "Python 3.12 + FastAPI + uvicorn。API / 管理機能・Pydantic によるスキーマ設計",
+  },
+  {
+    name: "Go（gorilla/mux 等）",
+    level: 4,
+    years: "現行",
+    note: "GAE Go 上の API・認証付き SPA 配信・Excel 出力・タスク連携",
+  },
+  {
+    name: "Python / Flask",
+    level: 4,
+    note: "業務システム（請求・外部 CRM 連携など）での API / バッチ",
   },
   {
     name: "Python / webapp2 / Jinja2",
     level: 5,
     years: "長期",
-    note: "GAE Python 2.7 時代からのサーバーサイド実装",
-  },
-  {
-    name: "PHP",
-    level: 4,
-    note: "GAE/PHP、業務ロジック、レガシー連携",
+    note: "GAE Python 2.7 時代からのサーバーサイド実装と移行経験",
   },
   {
     name: "REST API 設計",
     level: 5,
-    note: "CRUD、DELETE 制約への対応、URI 設計",
+    note: "CRUD、メソッド制約への対応、URI 設計、マルチサービス構成",
   },
   {
     name: "Google Cloud Datastore / NDB",
     level: 5,
-    note: "永続化・データモデル設計",
+    note: "永続化・データモデル設計（Go / Python 双方）",
+  },
+  {
+    name: "Cloud SQL / PostgreSQL",
+    level: 4,
+    years: "現行",
+    note: "SQLAlchemy / Alembic を用いたリレーショナル設計・マイグレーション",
   },
   {
     name: "Memcache / Redis",
     level: 4,
-    note: "キャッシュ戦略、上限超過時の分割格納など",
+    note: "キャッシュ・セッション、上限超過時の分割格納など",
   },
   {
-    name: "Google Cloud Tasks / Storage",
+    name: "認証 / 外部連携",
     level: 4,
-    note: "非同期処理・オブジェクトストレージ連携",
+    note: "Firebase Auth、OAuth2 / JWT、Zoho CRM、SendGrid / Resend",
   },
   {
-    name: "認証 / OAuth2",
+    name: "PHP",
     level: 3,
-    note: "angular-oauth2-oidc、Basic 認証の実務対応",
+    note: "GAE/PHP、業務ロジック、レガシー連携",
   },
 ];
 
@@ -133,7 +152,18 @@ export const infraSkills: SkillItem[] = [
     name: "Google App Engine",
     level: 5,
     years: "長期",
-    note: "デプロイ、ローカル開発、ハンドラ設計、セキュリティヘッダ",
+    note: "Python / Go ランタイム、dispatch・複数サービス、セキュリティヘッダ、cron / queue",
+  },
+  {
+    name: "Cloud Run",
+    level: 4,
+    years: "現行",
+    note: "コンテナレスデプロイ、Cloud SQL / Tasks / GCS との連携",
+  },
+  {
+    name: "Cloud Tasks / Cloud Storage",
+    level: 4,
+    note: "非同期処理・オブジェクトストレージ・帳票／メール送信パイプライン",
   },
   {
     name: "サーバ管理 / Linux",
@@ -148,17 +178,62 @@ export const infraSkills: SkillItem[] = [
   {
     name: "Git / GitHub",
     level: 4,
-    note: "公開リポジトリでの継続開発",
+    note: "公開・非公開リポジトリでの継続開発",
   },
   {
-    name: "Prettier / Vitest",
+    name: "Vitest / Playwright / pytest",
     level: 3,
-    note: "現行フロントの品質・テスト基盤",
+    note: "現行フロントの単体・E2E、Python 側の結合テスト",
   },
   {
     name: "CORS / HTTP 仕様",
     level: 4,
     note: "クロスドメイン通信、メソッド制約の調査・回避",
+  },
+];
+
+export const projects: ProjectItem[] = [
+  {
+    name: "再生可能エネルギー向け Web",
+    role: "設計・実装・運用",
+    stack: "Angular 22 / FastAPI / Cloud Run / PostgreSQL",
+    summary:
+      "事業者向け会員・地図・運転費用カルテ等。Cloud Run への移行とリレーショナル DB 化を含む。",
+  },
+  {
+    name: "B2B 受発注ポータル（第2世代）",
+    role: "モダン化・実装・運用",
+    stack: "Angular 15 / FastAPI / GAE / Firebase Auth / Redis",
+    summary:
+      "代理店向け販売・受発注の次世代版。PDF・外部 CRM 連携・非同期タスクを含む。",
+  },
+  {
+    name: "認証・査定系業務 Web",
+    role: "設計・実装",
+    stack: "Angular / Go / GAE / Datastore / Excel 出力",
+    summary:
+      "設問フロー・結果帳票・申込メールまで一気通貫のオンライン自己査定。",
+  },
+  {
+    name: "不動産オペレーション Web",
+    role: "設計・実装・運用",
+    stack: "Angular / Go / GAE / Redis / Cloud Tasks",
+    summary:
+      "多段フォームの申込・予約、セッション管理、画像変換、非同期処理。",
+  },
+  {
+    name: "業務システム（請求・ポータル連携）",
+    role: "設計・実装・運用",
+    stack: "Flask / AngularJS / Go / Zoho / G Suite API",
+    summary:
+      "請求処理や精算ポータル、Analytics 連携など社内外の業務効率化。",
+  },
+  {
+    name: "自社公式サイト / CMS",
+    role: "企画〜運用",
+    stack: "Angular 22 / FastAPI / GAE / Datastore",
+    summary:
+      "オリジナル CMS を長期運用し、Python 3 / Angular へ全面刷新。",
   },
 ];
 
@@ -168,11 +243,12 @@ export const career: CareerItem[] = [
     title: "代表取締役",
     org: "株式会社ニーモニック",
     summary:
-      "ウェブサイトの企画制作・デザイン・システム開発を一人体制で提供。自社サイト兼オリジナル CMS を Google App Engine 上で設計・運用し、近年は Python 3 / FastAPI + Angular へのモダン化を完了。",
+      "ウェブサイトの企画制作・デザイン・業務システムの開発を一人体制で提供。GAE 中心の受託開発に加え、近年は FastAPI / Go / Angular 現代化と Cloud Run への展開を進める。",
     highlights: [
-      "自社公式サイト / CMS（GAE + Python + Angular）の企画〜実装〜運用",
-      "フロント（Angular 22 / TypeScript）とバック（FastAPI / Datastore）の一体開発",
-      "技術ブログでの知見共有（GAE、AngularJS、キャッシュ、デプロイなど）",
+      "太陽光・不動産・B2B コマースなどドメイン業務 Web の企画〜実装〜運用",
+      "AngularJS / Python 2 から Angular 15〜22 / Python 3.12 / Go への段階的移行",
+      "Datastore だけでなく Cloud SQL・Redis・Firebase Auth・外部 CRM を組み合わせた構成",
+      "自社公式サイト / CMS の刷新（GAE + FastAPI + Angular 22）と技術知見の公開",
     ],
   },
   {
@@ -224,26 +300,26 @@ export const career: CareerItem[] = [
 export const strengths = [
   {
     title: "企画から運用までの一気通貫",
-    body: "要件整理・デザイン・フロント・バック・デプロイ・運用まで、小さなチーム（一人）でも完結できる実務力。",
+    body: "要件整理・デザイン・フロント・バック・デプロイ・運用まで、小さなチーム（一人）でも完結できる実務力。帳票・メール・外部 API まで含めて設計できる。",
   },
   {
-    title: "クラウド上での実戦経験",
-    body: "Google App Engine を中心に、Datastore / Memcache / Tasks / Storage を組み合わせたサービス運用の知見。",
+    title: "GCP 上での実戦経験",
+    body: "App Engine（Python / Go）を軸に、Cloud Run・Datastore / Cloud SQL・Tasks・Storage・Redis を組み合わせたサービス運用の知見。",
   },
   {
     title: "レガシーから現行への橋渡し",
-    body: "AngularJS / Python 2 / webapp2 から Angular 22 / Python 3 / FastAPI への移行を自ら進められる。",
+    body: "AngularJS / Python 2 / webapp2 から Angular 22 / Python 3 / FastAPI・Go への移行を、稼働中サービスとして自ら進められる。",
   },
 ];
 
 export const learningInterests = [
   "Next.js など現代的な Web アプリ開発",
-  "生成 AI を活かしたバックエンド設計",
-  "SaaS フロントエンドの最新動向",
+  "生成 AI を活かしたバックエンド設計・業務自動化",
+  "Cloud Run / コンテナ運用のさらなる深化",
 ];
 
 export const sourcesNote =
-  "本スキルシートは、株式会社ニーモニック公式サイトの代表プロフィール、技術ブログ、および公開 GitHub リポジトリ（mnemonic-official / mnemonic-official-py3）など、公開情報をもとに構成しています。年月・案件詳細は必要に応じてご加筆ください。";
+  "本スキルシートは、公開プロフィール・技術ブログに加え、社内の非公開 GitHub リポジトリ（受託・自社案件の実装）をもとに構成しています。クライアント名・機密情報は伏せ、技術スタックと役割の粒度で記載しています。";
 
 export const levelLabels: Record<SkillLevel, string> = {
   1: "基礎",

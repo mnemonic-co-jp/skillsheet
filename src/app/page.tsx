@@ -1,5 +1,6 @@
 import { PrintButton } from "@/components/skillsheet/print-button";
 import { SkillsSection } from "@/components/skillsheet/skills-section";
+import { ProjectsSection } from "@/components/skillsheet/projects-section";
 import { CareerSection } from "@/components/skillsheet/career-section";
 import { StrengthsSection } from "@/components/skillsheet/strengths-section";
 import { profile, summary, sourcesNote } from "@/data/skillsheet";
@@ -17,6 +18,9 @@ export default function Home() {
         <nav className="hidden gap-6 text-sm text-[var(--ink-muted)] sm:flex">
           <a className="transition hover:text-[var(--ink)]" href="#skills">
             Skills
+          </a>
+          <a className="transition hover:text-[var(--ink)]" href="#projects">
+            Projects
           </a>
           <a className="transition hover:text-[var(--ink)]" href="#career">
             Career
@@ -119,6 +123,7 @@ export default function Home() {
           </section>
 
           <SkillsSection />
+          <ProjectsSection />
           <CareerSection />
           <StrengthsSection />
 
