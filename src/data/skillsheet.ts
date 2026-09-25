@@ -32,14 +32,14 @@ export const profile = {
   website: "https://www.mnemonic.co.jp",
   github: "https://github.com/mnemonic-co-jp",
   birth: "1968年 / 京都府舞鶴市",
-  updatedAt: "2026年9月26日 03:51",
+  updatedAt: "2026年9月26日 03:58",
 };
 
 export const summary = {
   headline: "企画から実装・運用までを一人で回す、実務型フルスタック。",
   body: [
     "1995年頃からウェブデザイン・システム開発・サーバ管理を主戦場とし、制作会社勤務を経て 2010 年にフリーランスへ復帰。2014 年に株式会社ニーモニックを設立し、ウェブサイトの企画制作・デザイン・業務システムの開発を一貫して担っています。",
-    "フロントは Angular（現行 15〜22）/ Vue / AngularJS・TypeScript、バックは Python（FastAPI / Django / Flask / webapp2）と Go、インフラは GCP（GAE / Cloud Run）と AWS を中心に、位置情報・店舗検索・B2B 業務 Web まで設計・実装・運用しています。",
+    "フロントは Angular（現行 15〜22）/ Vue / AngularJS・TypeScript、バックは Python（FastAPI / Django / Flask / webapp2）と Go、インフラは GCP（GAE / Cloud Run）と AWS を中心に、位置情報・店舗検索・B2B 業務 Web まで設計・実装・運用しています。加えて React / Next.js は約 1 年半の自主練を続けており、案件への投入も可能な状態です。",
   ],
 };
 
@@ -61,6 +61,12 @@ export const frontendSkills: SkillItem[] = [
     level: 4,
     years: "2019〜",
     note: "Vue 2（Webpack）での大規模フロント刷新。Vue 3 / Astro 連携の経験あり",
+  },
+  {
+    name: "React / Next.js",
+    level: 3,
+    years: "約1年半",
+    note: "実務リポジトリ外での継続的な自主練。Hooks・App Router 等を習得し、案件投入可能な状態",
   },
   {
     name: "HTML / CSS / SCSS",
@@ -365,19 +371,19 @@ export const strengths = [
     body: "App Engine・Cloud Run に加え、AWS（S3 / RDS / Redis / Athena 等）での位置情報・業務 SaaS 運用の知見。",
   },
   {
-    title: "レガシーから現行への橋渡し",
-    body: "AngularJS / Django 1.x / Python 2 から Vue・Angular 22 / Django 3・FastAPI・Go への移行を、稼働中サービスとして進められる。",
+    title: "現行スタックへの継続的な追随",
+    body: "AngularJS / Django 系から Angular・Vue・FastAPI・Go への移行に加え、React / Next.js を約 1 年半自主練。案件の技術選定に合わせて投入できる幅がある。",
   },
 ];
 
 export const learningInterests = [
-  "Next.js など現代的な Web アプリ開発",
+  "React / Next.js の実務適用と設計パターンの深化",
   "生成 AI を活かしたバックエンド設計・業務自動化",
   "Cloud Run / コンテナ運用のさらなる深化",
 ];
 
 export const sourcesNote =
-  "本スキルシートは、公開プロフィール・技術ブログ、ニーモニック非公開リポジトリ、および協力先の地図・位置情報系プロダクト実装をもとに構成しています。クライアント名・製品名・機密情報は伏せ、技術スタックと役割の粒度で記載しています。";
+  "本スキルシートは、公開プロフィール・技術ブログ、ニーモニック非公開リポジトリ、協力先の地図・位置情報系プロダクト実装に加え、React など実務外の継続的な自主練も含めて構成しています。クライアント名・製品名・機密情報は伏せ、技術スタックと役割の粒度で記載しています。";
 
 export const levelLabels: Record<SkillLevel, string> = {
   1: "基礎",
