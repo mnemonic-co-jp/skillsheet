@@ -5,6 +5,7 @@ import { ProjectsSection } from "@/components/skillsheet/projects-section";
 import { CareerSection } from "@/components/skillsheet/career-section";
 import { StrengthsSection } from "@/components/skillsheet/strengths-section";
 import { profile, summary, sourcesNote } from "@/data/skillsheet";
+import profilePhoto from "@/assets/profile.jpg";
 
 export default function Home() {
   return (
@@ -62,7 +63,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src={profile.photo}
+              src={profilePhoto}
               alt={`${profile.nameJa}のプロフィール写真`}
               width={240}
               height={240}
