@@ -134,6 +134,11 @@
   animation: rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.hero-photo {
+  animation: rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  box-shadow: 0 0 0 1px var(--ink-line);
+}
+
 .hero-meta {
   animation: rise 1000ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
 }
@@ -173,6 +178,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .hero-copy,
+  .hero-photo,
   .hero-meta,
   .skill-reveal,
   .career-item,

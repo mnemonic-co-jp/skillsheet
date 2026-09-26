@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PrintButton } from "@/components/skillsheet/print-button";
 import { SkillsSection } from "@/components/skillsheet/skills-section";
 import { ProjectsSection } from "@/components/skillsheet/projects-section";
@@ -33,31 +34,41 @@ export default function Home() {
 
       <main className="relative z-10">
         <section className="mx-auto flex min-h-[88vh] w-full max-w-6xl flex-col justify-center px-5 py-16 sm:px-8 sm:py-20">
-          <div className="hero-copy max-w-4xl">
-            <p className="text-sm tracking-[0.2em] text-[var(--accent-deep)]">
-              {profile.company}
-            </p>
-            <h1 className="mt-4 font-display text-[clamp(2.8rem,9vw,6.2rem)] leading-[1.05] tracking-tight text-[var(--ink)]">
-              {profile.nameJa}
-            </h1>
-            <p className="mt-3 font-display text-xl text-[var(--ink-muted)] sm:text-2xl">
-              {profile.nameEn}
-            </p>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[var(--ink)] sm:text-xl">
-              {summary.headline}
-            </p>
-            <p className="mt-4 max-w-2xl text-[var(--ink-muted)]">
-              {profile.title} · {profile.location}
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
-              <a
-                href="#skills"
-                className="inline-flex h-11 items-center justify-center rounded-lg bg-[var(--ink)] px-5 text-sm font-medium text-[var(--paper)] transition hover:bg-[var(--accent-deep)]"
-              >
-                スキルを見る
-              </a>
-              <PrintButton />
+          <div className="hero-copy flex max-w-5xl flex-col gap-10 sm:flex-row sm:items-end sm:justify-between sm:gap-14">
+            <div className="min-w-0 flex-1">
+              <p className="text-sm tracking-[0.2em] text-[var(--accent-deep)]">
+                {profile.company}
+              </p>
+              <h1 className="mt-4 font-display text-[clamp(2.8rem,9vw,6.2rem)] leading-[1.05] tracking-tight text-[var(--ink)]">
+                {profile.nameJa}
+              </h1>
+              <p className="mt-3 font-display text-xl text-[var(--ink-muted)] sm:text-2xl">
+                {profile.nameEn}
+              </p>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[var(--ink)] sm:text-xl">
+                {summary.headline}
+              </p>
+              <p className="mt-4 max-w-2xl text-[var(--ink-muted)]">
+                {profile.title} · {profile.location}
+              </p>
+              <div className="mt-10 flex flex-wrap items-center gap-3">
+                <a
+                  href="#skills"
+                  className="inline-flex h-11 items-center justify-center rounded-lg bg-[var(--ink)] px-5 text-sm font-medium text-[var(--paper)] transition hover:bg-[var(--accent-deep)]"
+                >
+                  スキルを見る
+                </a>
+                <PrintButton />
+              </div>
             </div>
+            <Image
+              src={profile.photo}
+              alt={`${profile.nameJa}のプロフィール写真`}
+              width={240}
+              height={240}
+              priority
+              className="hero-photo order-first size-36 shrink-0 object-cover sm:order-none sm:size-52 md:size-60"
+            />
           </div>
 
           <div className="hero-meta mt-16 grid max-w-3xl gap-4 border-t border-[var(--ink-line)] pt-6 text-sm text-[var(--ink-muted)] sm:grid-cols-3">
