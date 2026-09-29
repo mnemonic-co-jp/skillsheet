@@ -32,14 +32,14 @@ export const profile = {
   website: "https://www.mnemonic.co.jp",
   github: "https://github.com/mnemonic-co-jp",
   birth: "1968年 / 京都府舞鶴市",
-  updatedAt: "2026年9月26日 19:28",
+  updatedAt: "2026年9月30日",
 };
 
 export const summary = {
   headline: "企画から実装・運用までを一人で回す、実務型フルスタック。",
   body: [
     "1995年頃からウェブデザイン・システム開発・サーバ管理を主戦場とし、制作会社勤務を経て 2010 年にフリーランスへ復帰。2014 年に株式会社ニーモニックを設立し、ウェブサイトの企画制作・デザイン・業務システムの開発を一貫して担っています。",
-    "フロントは Angular（現行 15〜22）/ Vue / AngularJS・TypeScript、バックは Python（FastAPI / Django / Flask / webapp2）と Go、インフラは GCP（GAE / Cloud Run）と AWS を中心に、位置情報・店舗検索・B2B 業務 Web まで設計・実装・運用しています。加えて React / Next.js は約 1 年半の自主練を続けており、案件への投入も可能な状態です。",
+    "フロントは Angular（現行 15〜22）/ Vue / AngularJS・TypeScript、バックは Python（FastAPI / Django / Flask / webapp2）と Go、インフラは GCP（GAE / Cloud Run）を中心に、位置情報・店舗検索・B2B 業務 Web まで設計・実装・運用しています。加えて React / Next.js は約 1 年半の自主練を続けており、案件への投入も可能な状態です。",
   ],
 };
 
@@ -185,12 +185,6 @@ export const infraSkills: SkillItem[] = [
     note: "コンテナレスデプロイ、Cloud SQL / Tasks / GCS との連携",
   },
   {
-    name: "AWS（S3 / RDS / ElastiCache 等）",
-    level: 4,
-    years: "2015〜2022",
-    note: "位置分析系プロダクトの運用。Athena / Redshift / ECR / Docker も利用",
-  },
-  {
     name: "Cloud Tasks / Cloud Storage",
     level: 4,
     note: "非同期処理・オブジェクトストレージ・帳票／メール送信パイプライン",
@@ -226,14 +220,14 @@ export const projects: ProjectItem[] = [
   {
     name: "人流・位置データ分析 Web",
     role: "設計・実装・移行",
-    stack: "Django / Vue 2 / MySQL GIS / AWS / Athena",
+    stack: "Django / Vue 2 / MySQL GIS",
     summary:
       "人流・交通データを扱う位置分析 Web。AngularJS から Vue への刷新、Python 3 / コンテナ化を含む。",
   },
   {
     name: "商圏・比較分析 Web",
     role: "設計・実装・移行",
-    stack: "Django / Vue 2・AngularJS / Redis / AWS",
+    stack: "Django / Vue 2・AngularJS / Redis",
     summary:
       "商圏ヒートマップ・比較分析・ユーザーポイント管理。関連分析基盤との SSO / JWT 連携。",
   },
@@ -307,7 +301,7 @@ export const career: CareerItem[] = [
     title: "開発パートナー / フルスタックエンジニア",
     org: "地図・位置情報系 SaaS 企業向け（ニーモニックとして）",
     summary:
-      "位置情報・地図ソリューションを中心に、店舗検索・商圏分析・人流分析プロダクトの設計・実装・モダン化を協力。Django / Vue / AWS を軸に長期参画。",
+      "位置情報・地図ソリューションを中心に、店舗検索・商圏分析・人流分析プロダクトの設計・実装・モダン化を協力。Django / Vue を軸に長期参画。",
     highlights: [
       "人流・位置分析 Web のフロント刷新（AngularJS → Vue）とバックエンド現代化",
       "商圏・比較分析 Web の機能開発・Vue 移行・分析基盤連携",
@@ -367,8 +361,8 @@ export const strengths = [
     body: "要件整理・デザイン・フロント・バック・デプロイ・運用まで、小さなチーム（一人）でも完結できる実務力。帳票・メール・外部 API まで含めて設計できる。",
   },
   {
-    title: "GCP / AWS 上での実戦経験",
-    body: "App Engine・Cloud Run に加え、AWS（S3 / RDS / Redis / Athena 等）での位置情報・業務 SaaS 運用の知見。",
+    title: "GCP 上での実戦経験",
+    body: "App Engine・Cloud Run を中心に、位置情報・業務 SaaS の設計・実装・運用の知見。",
   },
   {
     title: "現行スタックへの継続的な追随",
