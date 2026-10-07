@@ -32,7 +32,7 @@ export const profile = {
   website: "https://www.mnemonic.co.jp",
   github: "https://github.com/mnemonic-co-jp",
   birth: "1968年 / 京都府舞鶴市",
-  updatedAt: "2026年9月30日 4:12",
+  updatedAt: "2026年10月8日 4:57",
 };
 
 export const summary = {
