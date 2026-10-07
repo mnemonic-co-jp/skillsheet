@@ -35,7 +35,15 @@ export default function Home() {
 
       <main className="relative z-10">
         <section className="mx-auto flex min-h-[88vh] w-full max-w-6xl flex-col justify-center px-5 py-16 sm:px-8 sm:py-20">
-          <div className="hero-copy flex max-w-5xl flex-col gap-10 sm:flex-row sm:items-end sm:justify-between sm:gap-14">
+          <div className="hero-copy flex max-w-5xl flex-col gap-10 sm:flex-row sm:items-start sm:gap-14">
+            <Image
+              src={profilePhoto}
+              alt={`${profile.nameJa}のプロフィール写真`}
+              width={profilePhoto.width}
+              height={profilePhoto.height}
+              priority
+              className="hero-photo h-auto w-36 shrink-0 sm:w-48 md:w-56"
+            />
             <div className="min-w-0 flex-1">
               <p className="text-sm tracking-[0.2em] text-[var(--accent-deep)]">
                 {profile.company}
@@ -61,48 +69,39 @@ export default function Home() {
                 </a>
                 <PrintButton />
               </div>
-            </div>
-            <Image
-              src={profilePhoto}
-              alt={`${profile.nameJa}のプロフィール写真`}
-              width={240}
-              height={240}
-              priority
-              className="hero-photo order-first size-36 shrink-0 object-cover sm:order-none sm:size-52 md:size-60"
-            />
-          </div>
-
-          <div className="hero-meta mt-16 grid max-w-3xl gap-4 border-t border-[var(--ink-line)] pt-6 text-sm text-[var(--ink-muted)] sm:grid-cols-3">
-            <div>
-              <p className="text-xs tracking-[0.18em] uppercase">Contact</p>
-              <a
-                className="mt-1 block text-[var(--ink)] underline-offset-4 hover:underline"
-                href={`mailto:${profile.email}`}
-              >
-                {profile.email}
-              </a>
-            </div>
-            <div>
-              <p className="text-xs tracking-[0.18em] uppercase">Web</p>
-              <a
-                className="mt-1 block text-[var(--ink)] underline-offset-4 hover:underline"
-                href={profile.website}
-                target="_blank"
-                rel="noreferrer"
-              >
-                mnemonic.co.jp
-              </a>
-            </div>
-            <div>
-              <p className="text-xs tracking-[0.18em] uppercase">GitHub</p>
-              <a
-                className="mt-1 block text-[var(--ink)] underline-offset-4 hover:underline"
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                mnemonic-co-jp
-              </a>
+              <div className="hero-meta mt-16 grid max-w-3xl gap-4 border-t border-[var(--ink-line)] pt-6 text-sm text-[var(--ink-muted)] sm:grid-cols-3">
+                <div>
+                  <p className="text-xs tracking-[0.18em] uppercase">Contact</p>
+                  <a
+                    className="mt-1 block text-[var(--ink)] underline-offset-4 hover:underline"
+                    href={`mailto:${profile.email}`}
+                  >
+                    {profile.email}
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs tracking-[0.18em] uppercase">Web</p>
+                  <a
+                    className="mt-1 block text-[var(--ink)] underline-offset-4 hover:underline"
+                    href={profile.website}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    mnemonic.co.jp
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs tracking-[0.18em] uppercase">GitHub</p>
+                  <a
+                    className="mt-1 block text-[var(--ink)] underline-offset-4 hover:underline"
+                    href={profile.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    mnemonic-co-jp
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
